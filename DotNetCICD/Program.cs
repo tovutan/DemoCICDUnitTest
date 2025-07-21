@@ -5,6 +5,7 @@ public class Program
     {
         var calculator = new Calculator();
         Console.WriteLine($"Sum of 2 and 3 is {calculator.Add(2, 3)}");
+        Console.WriteLine($"testsssss");
         Console.ReadLine();
     }
 }
