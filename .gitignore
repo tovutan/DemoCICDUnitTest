@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/DotNetCICD/CopilotIndices/17.14.734.62261
+/.vs/DotNetCICD/DesignTimeBuild
+/.vs/DotNetCICD/FileContentIndex
+/.vs/DotNetCICD/v17
+/DotNetConsoleApp.Tests/bin/Debug/net8.0
+/DotNetConsoleApp.Tests/obj
+/DotNetCICD/bin/Debug/net8.0
+/.vs/ProjectEvaluation
+/DotNetCICD/obj
