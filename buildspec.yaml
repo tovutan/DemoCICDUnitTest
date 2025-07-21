@@ -1,0 +1,23 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+  pre_build:
+    commands:
+      - echo Restoring dependencies...
+      - dotnet restore
+  build:
+    commands:
+      - echo Building the project...
+      - dotnet build --configuration Release
+      - echo Running unit tests...
+      - dotnet test --no-build --configuration Release --logger "trx;LogFileName=unit-tests.trx"
+      - echo Publishing project...
+      - dotnet publish DotNetCICD/DotNetConsoleApp.csproj --configuration Release --output ./publish
+      - echo Creating lambda.zip...
+      - cd publish
+      - zip -r ../lambda.zip .
+artifacts:
+  files:
+    - lambda.zip
